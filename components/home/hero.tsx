@@ -10,8 +10,8 @@ export function Hero() {
   return (
     <section className="relative flex min-h-screen items-end overflow-hidden">
       <Image
-        src="/hero-truck.png"
-        alt="Electric pickup truck driving on an open highway at dusk"
+        src="/hero-wrapped-truck.png"
+        alt="I Haul Air branded electric semi truck and pickup on a national zero-emission campaign tour at dusk"
         fill
         priority
         sizes="100vw"
@@ -27,14 +27,23 @@ export function Hero() {
       />
 
       <div className="relative mx-auto w-full max-w-7xl px-4 pb-20 pt-32 sm:px-6 lg:px-8 lg:pb-28">
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-sm font-semibold uppercase tracking-[0.25em] text-primary"
+          className="flex flex-wrap items-center gap-3"
         >
-          Zero Emissions. Zero Compromise.
-        </motion.p>
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary backdrop-blur">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+            </span>
+            2026 National Zero-Emission Tour
+          </span>
+          <span className="text-sm font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+            A Clean-Air Sponsorship Campaign
+          </span>
+        </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,6 +85,16 @@ export function Hero() {
             <Link href="/shop">Shop</Link>
           </Button>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mt-8 text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground"
+        >
+          Backed by leading EV manufacturers, fleets &amp; clean-energy brands
+          across 48 states
+        </motion.p>
       </div>
 
       <motion.div
