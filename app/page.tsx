@@ -1,19 +1,2 @@
-import { Hero } from "@/components/home/hero"
-import { Partners } from "@/components/home/partners"
-import { Stats } from "@/components/home/stats"
-import { SponsorCta } from "@/components/home/sponsor-cta"
-import { Testimonials } from "@/components/home/testimonials"
-import { Newsletter } from "@/components/newsletter"
-
-export default function HomePage() {
-  return (
-    <>
-      <Hero />
-      <Partners />
-      <Stats />
-      <SponsorCta />
-      <Testimonials />
-      <Newsletter />
-    </>
-  )
-}
+import Link from "next/link"
+export default function Home(){return <div className="mx-auto max-w-7xl px-6 py-16"><section className="grid gap-8 lg:grid-cols-2 items-center"><div><p className="text-accent font-bold">ELECTRIC • HYBRID • PLUG-IN HYBRID</p><h1 className="text-6xl font-bold mt-4">Drive Cleaner. Earn More.</h1><p className="text-xl mt-6">Your choice to drive an electric or hybrid vehicle should come with more rewards.</p><Link className="inline-block mt-6 rounded-full bg-primary text-primary-foreground px-6 py-3" href="/profile">Create your free profile</Link><p className="mt-3 text-sm">Early access preview. Rewards partnerships are coming soon.</p></div><div><img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1200&q=85" alt="Electric passenger vehicle" className="rounded-3xl w-full"/><img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=1000&q=85" alt="Passenger sedan illustration" className="rounded-2xl w-full mt-3 aspect-[3/1] object-cover"/></div></section><section className="py-16"><h2 className="text-4xl font-bold">Rewards for everyday drivers</h2><div className="grid gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-3">{[["Charge & earn","Points at participating charging stations"],["Credit card rewards","Rewards through participating card issuers"],["Tires & repairs","Discounts at participating service shops"],["Dine & save","Offers at local eateries"],["Vehicle rebates","Potential points redemption toward your next vehicle"],["Merchandise","Wear the cleaner driving movement"]].map(([a,b])=><article key={a} className="rounded-2xl border bg-card p-7"><small className="text-accent">COMING SOON</small><h3 className="text-2xl font-bold mt-2">{a}</h3><p className="mt-3">{b}</p></article>)}</div></section><section className="rounded-3xl bg-card border p-8"><h2 className="text-3xl font-bold">IHAULAIR credit card</h2><p className="mt-4">A proposed manufacturer co-branded rewards card issued through participating licensed banks. No card is currently available.</p><Link href="/credit-card" className="text-primary underline">Explore the concept</Link></section><section className="py-16"><h2 className="text-3xl font-bold">Help lead the future of transportation</h2><p className="mt-4">Manufacturers, banks and merchants: build customer loyalty with IHaulAir.</p><Link href="/sponsorship" className="text-primary underline">Become a founding sponsor</Link></section></div>}
